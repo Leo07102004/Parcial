@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Formulario de Domicilios</title>
+        <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Fraunces:opsz,wght@9..144,500&display=swap" rel="stylesheet">
+        <link href="Domicilio.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <main>
+            <header>
+                <h1>Bienvenido al Formulario de Domicilios</h1>
+                <h3>Por favor agrega la información para enviar tu pedido</h3>
+            </header>
+            <form action="menu.html">
+                <label for="Nombre">Nombre:</label>
+                <input type="text" id="Nombre" name="Nombre" required><br><br>
+                <label for="Correo">Correo:</label>
+                <input type="email" id="Correo" name="Correo" required><br><br>
+                <label for="Direccion">Direccion:</label>
+                <input type="text" id="Direccion" name="Direccion" required><br><br>
+                <label for="Celular">Celular:</label>
+                <input type="number" id="Celular" name="Celular" required><br><br>
+                <label for="Metodo de Pago"><b>Metodo de Pago</b></label>
+                    <select name="Metodo de Pago" id="Metodo de Pago" required>
+                        <option value="tarjeta">Tarjeta</option>
+                        <option value="efectivo">Efectivo</option>
+                    </select><br>
+                <button id="envio"><b>Enviar</b></button>
+            </form>
+        </main>
+        <script src="script2.js"></script>
+    </body>
+</html>
