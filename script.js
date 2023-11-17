@@ -286,7 +286,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return total + miItem[0].price;
         }, 0).toFixed(2);
     }
-
+    
     //Vaciar el carrito y volver a dibujarlo
     function vaciarCarrito() {
         // Limpiar los productos guardados
@@ -359,7 +359,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // URL de la API
-    const url = "http://127.0.0.1:8000/api/products"; 
+    const url = "https://jpizza-mlmd-pnt20232-unisabana.onrender.com/api/products"; 
     const baseDeDatosProductos = [];
     // Realiza una solicitud GET a la API
     fetch(url)
