@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="sesion_style.css">
+</head>
+<body>
+    <header>
+        <h1> Inicia sesión</h1>
+    </header>
+    <main>
+        <form>
+            <label for="Usuario">Usuario:</label>
+            <input type="text" id="Usuario" name="Usuario" required><br><br>
+            <label for="Contraseña">Contraseña:</label>
+            <input type="text" id="Contraseña" name="Contraseña" required>
+            <button id="Start"> Iniciar sesión</button><br><br>
+            <label for="Celular_cliente">Celular cliente:</label>
+            <input type="number" id="Celular_cliente" name="Celular_cliente" required>
+            <button id="Tel">Telefonsito</button><br><br>
+            <label for="Correo_electronico">Correo electronico:</label>
+            <input type="email" id="Correo_electronico" name="Correo_electronico" required>
+            <button id="mail">Corretito</button><br><br>
+            <label for="Id">Id:</label>
+            <input type="number" id="Id" name="Id" required>
+            <button id="Estado">Cambiar Estado</button>
+        </form>
+        <div id="loader" class="loader"></div>
+        <table id="tabla">
+            <thead>
+                <tr>
+                    <th>Nombre cliente</th>
+                    <th>Celular cliente</th>
+                    <th>Correo cliente</th>
+                    <th>Direccion cliente</th>
+                    <th>Productos</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+        </table>
+    </main>
+</body>
+</html>

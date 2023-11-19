@@ -1,0 +1,47 @@
+.loader {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none; /* Inicialmente oculto */
+  }
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+html{
+    background-color: #E1C7A8;
+    font-family: 'Fraunces', serif;
+}
+header{
+    color: black;
+}
+#Tel{
+    display: inline-flex;
+    color: blue;
+    
+}
+#mail{
+    display: inline-flex;
+    color: orangered;
+}
+#Estado{
+    display: inline-flex;
+    color: green;
+}
+#Start{
+    display: inline-flex;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    font-size: medium;
+}
+#tabla{
+    visibility: hidden;
+}
