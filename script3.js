@@ -1,5 +1,5 @@
 function login() {
-    const email = document.getElementById('Usuario').value;
+    const email = document.getElementById('usuario').value;
     const password = document.getElementById('password').value;
 
     // Datos a enviar en la solicitud POST
@@ -32,7 +32,7 @@ function login() {
 
 function telefonsito() {
     // Configurar la solicitud Fetch 
-    const elem = document.getElementById('Celular_cliente');
+    const elem = document.getElementById('celular_cliente');
     const telefonito = elem.value;
     if (!telefonito) { // '', 0, null, undefined // valores truthy , falsy
         alert("Digíte un número primero");
