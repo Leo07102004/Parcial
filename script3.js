@@ -144,6 +144,7 @@ function cambiarsito() {
         }
         else{
             alert(`${data.mensaje}`);
+            dibujar(data);
         }
     })
     .catch(error => console.error(error)); 
