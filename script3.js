@@ -18,10 +18,13 @@ function login() {
         },
         body: JSON.stringify(data)
     })
-    .then(response => response.json())
+    .then((response) => {
+        return response.json();
+    })
     .then(data => {
         // Procesar la respuesta exitosa
         console.log(data);
+        alert(`${data.mensaje}`);
         sessionStorage.setItem('token', data.token);
     })
     .catch(error => {
@@ -45,8 +48,35 @@ function telefonsito() {
         headers: { 
         'Authorization': `Bearer ${token}`, 
         } 
-        }) 
-        .then(response => response.json()) 
-        .then(json => console.log(json)) 
-        .catch(error => console.error(error)); 
+    }) 
+    .then(response => response.json()) 
+    .then(data => {
+        console.log(data);
+        if (data[0] === undefined) {
+            // Datos vacíos, hacer algo, mostrar mensaje, etc.
+            alert('No hay datos para mostrar.');
+        } else {
+            // Procesar y mostrar los datos en la tabla
+            // Obtén la referencia de la tabla
+            const tabla = document.getElementById('tabla');
+  
+            // Itera sobre los pedidos y agrega cada uno a la tabla
+            data.forEach(pedido => {
+            // Crea una nueva fila
+            const fila = tabla.insertRow();
+            // Agrega celdas para cada propiedad del pedido
+            const propiedades = ['NombreCliente', 'CelularCliente', 'CorreoCliente', 'DireccionCliente', 'Productos', 'Estado'];
+            propiedades.forEach(propiedad => {
+            const celda = fila.insertCell();
+            celda.textContent = pedido[propiedad];
+            });
+        });
+        }
+    })
+    .catch(error => console.error(error)); 
+}
+
+function cerrar() {
+    sessionStorage.removeItem('token');
+    window.location.href = 'index.html';
 }
