@@ -120,6 +120,35 @@ function estadito() {
     .catch(error => console.error(error)); 
 }
 
+function cambiarsito() {
+    // Configurar la solicitud Fetch 
+    const elem = document.getElementById('id');
+    const cambiardito = elem.value;
+    if (!cambiardito) { // '', 0, null, undefined // valores truthy , falsy
+        alert("Digíte un id primero");
+        return '';
+    }
+    const url =`https://jpizza-mlmd-pnt20232-unisabana.onrender.com/api/cambiarsito?id=${cambiardito}`;
+    const token = sessionStorage.getItem('token'); 
+    fetch(url, { 
+        method: 'PUT',  
+        headers: { 
+        'Authorization': `Bearer ${token}`, 
+        } 
+    }) 
+    .then(response => response.json()) 
+    .then(data => {
+        console.log(data);
+        if (data.error !== undefined){
+            alert(`${data.error}`);
+        }
+        else{
+            alert(`${data.mensaje}`);
+        }
+    })
+    .catch(error => console.error(error)); 
+}
+
 function dibujar(data) {
     // Obtén la referencia de la tabla
     const tabla = document.getElementById('tabla');;
