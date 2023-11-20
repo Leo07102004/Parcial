@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
+    <script src="script3.js"></script>
     <link rel="stylesheet" href="sesion_style.css">
 </head>
 <body>
@@ -12,14 +13,14 @@
     </header>
     <main>
         <form>
-            <label for="Usuario">Usuario:</label>
+            <label for="Usuario">Email:</label>
             <input type="text" id="Usuario" name="Usuario" required><br><br>
             <label for="Contraseña">Contraseña:</label>
-            <input type="text" id="Contraseña" name="Contraseña" required>
-            <button id="Start"> Iniciar sesión</button><br><br>
+            <input type="password" id="Contraseña" name="Contraseña" required>
+            <button id="Start" onclick="login()"> Iniciar sesión</button><br><br>
             <label for="Celular_cliente">Celular cliente:</label>
             <input type="number" id="Celular_cliente" name="Celular_cliente" required>
-            <button id="Tel">Telefonsito</button><br><br>
+            <button id="Tel" onclick="telefonsito()">Telefonsito</button><br><br>
             <label for="Correo_electronico">Correo electronico:</label>
             <input type="email" id="Correo_electronico" name="Correo_electronico" required>
             <button id="mail">Corretito</button><br><br>
