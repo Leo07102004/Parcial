@@ -143,8 +143,8 @@ function cambiarsito() {
             alert(`${data.error}`);
         }
         else{
-            alert(`${data.mensaje}`);
             dibujar(data);
+            alert(`${data.mensaje}`);
         }
     })
     .catch(error => console.error(error)); 
