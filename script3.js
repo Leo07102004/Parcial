@@ -1,6 +1,6 @@
 function login() {
     const email = document.getElementById('Usuario').value;
-    const password = document.getElementById('Contraseña').value;
+    const password = document.getElementById('password').value;
 
     // Datos a enviar en la solicitud POST
     const data = {
